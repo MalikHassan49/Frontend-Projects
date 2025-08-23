@@ -323,3 +323,91 @@ nav ul li a:hover::after {
   color: #ff004f;
   transform: translateY(-5px);
 }
+
+.btn.btn2 {
+  background: #ff004f;
+  display: inline-block;
+}
+
+.contact-right form {
+  width: 100%;
+}
+
+form input, form textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 15px;
+  margin-block: 15px;
+  background: #262626;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  background: #262626;
+  padding: 25px 0px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+#heart {
+  color: #ff004f;
+}
+
+/* --------------- css for small screens ---------------- */
+nav .fa-solid {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #header {
+    background-image: url(personal-portfolio-img/images/phone-background.png);
+  }
+
+  .header-text {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .header-text h1 {
+    font-size: 19px;
+  }
+
+  nav .fa-solid {
+  display: block;
+  font-size: 20px;
+  }
+
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+  }
+  
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .fa-xmark {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+}
