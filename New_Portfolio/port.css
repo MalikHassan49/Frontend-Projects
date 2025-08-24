@@ -85,7 +85,11 @@ nav ul li a:hover::after {
   justify-content: space-between;
 }
 
-.about {
+  html {
+    scroll-behavior: smooth;
+  } 
+
+  #about {
   padding: 80px;
   color: #ababab;
 }
@@ -372,3 +376,90 @@ form .btn.btn2 {
   color: #ff004f;
 }
 
+nav .fa-solid {
+  display: none;
+}
+
+/* ------ css for small screens ------- */
+@media screen and (max-width: 600px){
+  #header {
+    background-image: url(personal-portfolio-img/images/phone-background.png);
+  }
+
+  .header-text p{
+    /* margin-top: 100%; */
+    font-size: 16px;
+  }
+
+  .header-text h1 {
+    font-size: 20px;
+  }
+
+  nav .fa-solid {
+  display: block;
+}
+
+ nav ul {
+  background: #ff004f;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100%;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  transition: right 0.5s;
+ }
+ nav ul li {
+  display: block;
+  margin-bottom: 25px;
+ }
+
+ nav ul .fa-solid {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  cursor: pointer;
+ }
+
+ .sub-title {
+  font-size: 25px;
+ }
+
+  #about {
+    padding: 50px;
+  }  
+
+  .row {
+    flex-direction: column;
+  }
+
+  .row-col-1 {
+    margin-bottom: 20px;
+  }
+
+  .row-col-2 {
+    font-size: 14px;
+  }
+
+  .tab-links {
+    margin-right: 30px;
+    font-size: 16px;
+  }
+
+  .left-contact, .right-contact {
+    flex-basis: 100%;
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
+}
+
+#msg {
+  color: #61b752;
+  margin-top: -40px;
+  display: block;
+}
