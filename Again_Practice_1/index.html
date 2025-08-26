@@ -13,11 +13,11 @@
     <nav>
     <img class="logo" src="personal-portfolio-img/images/logo.png" alt="logo-image">
     <ul id="sidemenu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#header">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
       <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
     </ul>
     <i class="fa-solid fa-bars" onclick="openMenu()"></i>
@@ -149,12 +149,13 @@
              <a href="personal-portfolio-img/images/my-cv.pdf" download class="btn btn2">Download CV</a>
           </div>
           <div class="right-contact">
-            <form>
+            <form id="submit-to-google-sheet">
             <input type="text" name="Name" placeholder="Your Name">
             <input type="email" name="Email" placeholder="Your Email">
             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
             <button type="submit" class="btn btn2">Submit</button>
             </form>
+            <span id="msg"></span>
           </div>
         </div>
       </div>
@@ -163,6 +164,7 @@
       </div>
     </div>
 
+    <!-- ------ script code ------ -->
    <script>
     const tabLinks = document.getElementsByClassName('tab-links')
     const tabContents = document.getElementsByClassName('tab-contents')
@@ -189,5 +191,24 @@
       sideMenu.style.right = "-200px"
     }
    </script>
+
+   <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwvicwt4OL_p0EhhzrjXIF1LFeda5sCz3Hr-HyMb3ihPcgWcLBThc4KmZb6lrxfAGZ3/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById('msg')
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function() {
+          msg.innerHTML = ""
+        }, 5000)
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 </html>

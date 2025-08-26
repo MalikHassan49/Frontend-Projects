@@ -7,6 +7,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   background: #080808;
   color: #fff;
@@ -78,7 +82,7 @@ nav ul li a:hover::after {
 /* -------about------- */
 
 #about {
-  padding: 80px;
+  padding: 60px;
   color: #ababab;
 }
 
@@ -338,6 +342,7 @@ form input, form textarea {
    margin-bottom: 30px;
    padding: 15px;
    background: rgb(38, 38, 38);
+   color: #fff;
    border-radius: 6px;
    font-size: 18px;
    border: none;
@@ -414,6 +419,42 @@ nav .fa-solid {
   }
 
   #about {
-    padding: 50px;
+    padding: 35px;
   }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .about-col-1 img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-col-2 h1 {
+    font-size: 25px;
+  }
+
+  .about-col-2 p {
+    font-size: 14px;
+  }
+
+  .tab-links {
+    margin-right: 20px;
+    font-size: 18px;
+  }
+
+  .tab-contents ul li {
+    font-size: 14px;
+  }
+
+   .copyright {
+    font-size: 14px;
+   }
+}
+
+#msg {
+  color: #61b752;
+  margin-top: -30px;
+  display: block;
 }
