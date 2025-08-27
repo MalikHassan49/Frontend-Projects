@@ -41,7 +41,7 @@ header h1 {
   transition: background-color 0.3s;
 }
 
-.header-search-bar input[type="button"]:hover, .recipes-container button:hover {
+.header-search-bar input[type="button"]:hover, .recipes-container button:hover, .recipe-close-btn:hover {
   background-color: #ff5c5c;
 }
 
@@ -53,19 +53,22 @@ header h1 {
 .recipes-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 100px;
+  grid-gap: 120px;
   padding: 30px 60px;
 }
 
-.recipes-list img {
-  width: 100%;
-}
 
 .recipes-container {
   background: #fff;
   color: #000000;
   text-align: center;
+  max-width: 330px;
+  overflow: hidden;
   transition: transform 0.3s;
+}
+
+.recipes-container img {
+  max-width: 330px;
 }
 
 .recipes-container h3 {
@@ -96,4 +99,60 @@ header h1 {
 
 .recipes-container:hover {
    transform: scale(1.02);
+}
+
+.recipe-details {
+  background: #694c2f;
+  width: 545px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  border-radius: 10px;
+  display: none;
+  overflow: scroll;
+}
+
+.recipe-details h2 {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-bottom: 8px;
+}
+
+.recipe-details h3 {
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+.ingredients-list {
+  margin-left: 30px;
+  margin-bottom: 5px;
+}
+
+.ingredients-list li {
+  margin-block: 5px;
+}
+
+.recipe-instructions p{
+   margin-left: 20px;
+   line-height: 25px;
+   margin-bottom: 10px;
+   white-space: pre-line;
+}
+
+.recipe-close-btn {
+  background-color: rgb(244, 67, 54);
+  color: #fff;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 18px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
