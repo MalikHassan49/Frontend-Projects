@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/1d8804d5ad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- header section starts here -->
+  <header>
+    <nav>
+      <p class="logo">Daily News</p>
+      <ul>
+        <li class="active-link">Home</li>
+        <li>World</li>
+        <li>Sports</li>
+      </ul>
+      <button class="login-Btn">Login/Signup</button>
+    </nav>
+  </header>
+  <!-- header section ends here -->
+  <main>
+    <section class="caregories-container">
+      <h1>Categories</h1>
+      <div class="category-list">
+        <!-- first category -->
+        <div class="category">
+          <h2>Business</h2>
+          <i class="fa-solid fa-business-time"></i>
+          <p class="description">Stay updated with the latest happenings in the corporate world, stock markets,
+            startups, and global trade. Explore how businesses are shaping the economy and driving innovation every day.
+          </p>
+        </div>
+        <!-- second category -->
+        <div class="category">
+          <h2>Technology</h2>
+          <i class="fa-solid fa-microchip"></i>
+          <p class="description">Uncover the latest in gadgets, apps, and digital trends transforming our world.
+            Learn how innovations in AI, software, and hardware impact daily life.
+            Stay ahead with updates on the tech shaping tomorrow’s future.</p>
+        </div>
+        <!-- Third category -->
+        <div class="category">
+          <h2>Sports</h2>
+          <i class="fa-solid fa-baseball-bat-ball"></i>
+          <p class="description">Catch highlights, match results, and stories from your favorite games and players.
+            Explore how sports inspire teamwork, passion, and unforgettable moments.
+            Stay in the loop with upcoming tournaments.</p>
+        </div>
+        <!-- fourth category -->
+        <div class="category">
+          <h2>Entertainment</h2>
+          <i class="fa-solid fa-music"></i>
+          <p class="description">Dive into the world of movies, music, TV shows, and celebrity buzz. Explore how
+            entertainment brings joy, culture, and creativity to our daily lives. Stay tuned for the latest updates,
+            reviews, and trends.</p>
+        </div>
+        <!-- fifth category -->
+        <div class="category">
+          <h2>Health</h2>
+          <i class="fa-solid fa-notes-medical"></i>
+          <p class="description">Discover tips on fitness, nutrition, and mental well-being for a healthier life.
+            Learn how medical research and lifestyle choices improve everyday health.
+            Stay informed about trends that shape a balanced and mindful lifestyle.</p>
+        </div>
+        <!-- six category -->
+        <div class="category">
+          <h2>Science</h2>
+          <i class="fa-solid fa-flask-vial"></i>
+          <p class="description">Explore discoveries in space, biology, physics, and beyond.
+            Understand how science explains mysteries and shapes modern knowledge.
+            Stay curious with updates that connect research to real-world impact.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Categories data -->
+    <div class="categories-content">
+      <div class="search-category-container">
+        <h1>Search for your favourite news...</h1>
+        <input title="Code must be in lower case like uk" type="text" placeholder="Enter country code..." id="country">
+        <input type="text" placeholder="Enter category..." id="category">
+        <input type="button" value="Search" id="searchBtn">
+      </div>
+      <div class="categories-detail"></div>
+    </div>
+  </main>
+</body>
+<script src="script.js"></script>
+
+</html>
